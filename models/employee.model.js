@@ -24,7 +24,6 @@ const findEmployeeByID = (id) => {
 
 const createEmployee = (employee) => {
   return new Promise(async (reslove, reject) => {
-    employee.created_date = new Date();
     try {
       const query = "INSERT INTO employee SET ?";
       const [result] = await conn.promise().query(query, employee);
